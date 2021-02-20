@@ -66,27 +66,25 @@ footer {
 
 main {
   display: grid;
+  gap: 1px;
+  padding: 5px 200px;
 }
 
 @media screen and (max-width: 766px) {
   main {
     border: dashed green 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1px;
-    padding: 5px 200px;
-    grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-areas: "A" "B" "C" "D" "E" "F" "G" "H" "I" "J";
   }
 }
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
   main {
     border: dashed red 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1px;
-    padding: 5px 200px;
-    grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: "A A" "A A" "B B" "B B" "C D" "E F" "G H" "I J";
   }
 }
 
@@ -95,8 +93,6 @@ main {
     border: dashed blue 5px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1px;
-    padding: 5px 200px;
     grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
   }
 }

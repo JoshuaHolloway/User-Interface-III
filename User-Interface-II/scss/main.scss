@@ -22,6 +22,8 @@ footer {
 
 main {
   display: grid;
+  gap: 1px;
+  padding: 5px 200px;
 
   // https://getbootstrap.com/docs/5.0/layout/breakpoints/
   // Breakpoint         Class infix     Dimensions    Range
@@ -35,51 +37,49 @@ main {
 
   // sm
   @media screen and 
-    (max-width: 766px) {
-
+    (max-width: 766px) 
+  {
     border: dashed green 5px;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1px;
-    padding: 5px 200px;
-
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     grid-template-areas: 
-      "A A B B"
-      "A A B B"
-      "C D E F"
-      "G H I J";
+      "A"
+      "B"
+      "C"
+      "D"
+      "E"
+      "F"
+      "G"
+      "H"
+      "I"
+      "J";
   }
 
   // md
   @media screen and 
-    (min-width: 767px) and (max-width: 991px){
-
+    (min-width: 767px) and (max-width: 991px)
+  {
     border: dashed red 5px;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1px;
-    padding: 5px 200px;
-
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-template-areas: 
-      "A A B B"
-      "A A B B"
-      "C D E F"
-      "G H I J";
+      "A A"
+      "A A"
+      "B B"
+      "B B"
+      "C D"
+      "E F"
+      "G H"
+      "I J";
   }
 
   // lg
   @media screen and 
-    (min-width: 992px) {
-
+    (min-width: 992px)
+  {
     border: dashed blue 5px;
-
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1px;
-    padding: 5px 200px;
-
     grid-template-areas: 
       "A A B B"
       "A A B B"
