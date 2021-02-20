@@ -66,11 +66,39 @@ footer {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 1px;
-  padding: 5px 200px;
-  grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+}
+
+@media screen and (max-width: 766px) {
+  main {
+    border: dashed green 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1px;
+    padding: 5px 200px;
+    grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  main {
+    border: dashed red 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1px;
+    padding: 5px 200px;
+    grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    border: dashed blue 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1px;
+    padding: 5px 200px;
+    grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+  }
 }
 
 nav {

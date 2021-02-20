@@ -10,11 +10,13 @@ qs('.hamburger').addEventListener('click', () => {
   tl.to('.line-1', {
       duration: 0.25,
       y: +15,
+      ease: Strong.easeInOut
     }, 0
   );
   tl.to('.line-3', {
       duration: 0.25,
       y: -15,
+      ease: Strong.easeInOut
     }, 0
   );
 
@@ -22,17 +24,20 @@ qs('.hamburger').addEventListener('click', () => {
       duration: 0.25,
       rotation: 360,
       transformOrigin:"50% 50%",
+      ease: Strong.easeInOut
     }
   );
 
   tl.to('.line-1', {
       duration: 0.25,
       y: 0,
+      ease: Strong.easeInOut
     }, 0.5
   );
   tl.to('.line-3', {
       duration: 0.25,
       y: 0,
+      ease: Strong.easeInOut
     }, 0.5
   );
 });
