@@ -75,42 +75,68 @@ main {
 
 nav {
   display: flex;
-  flex-direction: column;
   padding: 0 2%;
 }
 
-nav:hover a {
-  opacity: 0.5;
+nav .left {
+  flex-grow: 1;
+  border: dashed darkorchid 5px;
+  display: flex;
+  flex-direction: column;
 }
 
-nav a {
-  opacity: 1;
-  transition: opacity 0.2s ease, border-bottom 0.9s ease;
-  color: white;
+nav .right {
+  flex-grow: 6;
+  border: dashed yellowgreen 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2%;
 }
 
-nav a:hover {
-  opacity: 1;
-  border-bottom: solid white 3px;
+nav .right .hamburger {
+  height: 75px;
+  width: 75px;
+  border: solid white 3px;
+}
+
+nav .right .hamburger .line {
+  height: 10px;
+  width: 100px;
+  background: white;
 }
 
 nav .nav__row {
   border: solid hotpink 2px;
-  width: 50%;
   display: flex;
   align-items: center;
 }
 
-nav .nav__row:nth-child(1) {
+nav .nav__row.top {
   flex-grow: 2;
 }
 
-nav .nav__row:nth-child(2) {
+nav .nav__row.bottom {
   flex-grow: 1;
   padding: 0 1%;
 }
 
-nav .nav__row:nth-child(2) a {
+nav .nav__row.bottom:hover a {
+  opacity: 0.5;
+}
+
+nav .nav__row.bottom a {
+  transition: opacity 0.2s ease, border-bottom 0.9s ease;
+}
+
+nav .nav__row.bottom a:hover {
+  opacity: 1;
+  border-bottom: solid white 3px;
+}
+
+nav .nav__row.bottom a {
+  opacity: 1;
+  color: white;
   display: inline-block;
   height: 50px;
   flex-grow: 1;
