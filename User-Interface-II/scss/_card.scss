@@ -1,0 +1,40 @@
+.card {
+  // height: 100%;
+  // width: 100%;
+  background: red;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  .card__title {
+    border: dashed deepskyblue 2px;
+    * { margin: 0; }
+  }
+  .card__img {
+    border: dashed greenyellow 2px;
+    width: 100%;
+    background-image: url('../assets/img/lena.png');
+  }
+  .card__supporting-text {
+    border: dashed darkturquoise 2px;
+  }
+  .card__actions {
+    border: dashed darkorchid 2px;
+    display: flex;
+    .left {
+      border: solid white 2px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .right {
+      border: solid blue 2px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+}

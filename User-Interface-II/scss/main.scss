@@ -1,0 +1,41 @@
+* {
+  margin: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  background: deepskyblue;
+  margin: 0;
+  height: 1080px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+}
+
+nav {
+  background: gray;
+}
+
+footer {
+  background: gray;
+}
+
+main {
+  // height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1px;
+  padding: 5px 200px;
+
+  grid-template-areas: 
+    "A A B B"
+    "A A B B"
+    "C D E F"
+    "G H I J";
+}
+
+@import 'nav';
+@import 'main';
+@import 'footer';

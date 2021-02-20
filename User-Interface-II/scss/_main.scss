@@ -1,0 +1,28 @@
+.hero-img { grid-area: A; }
+.hero-text { grid-area: B; }
+.C { grid-area: C }
+.D { grid-area: D }
+.E { grid-area: E }
+.F { grid-area: F }
+.G { grid-area: G }
+.H { grid-area: H }
+.I { grid-area: I }
+.J { grid-area: J }
+
+.hero-img {
+  background: darkorange;
+}
+
+.hero-text {
+  background: darkorchid;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .container {
+    border: dashed white 5px;
+    height: 80%;
+  }
+}
+
+@import 'card';

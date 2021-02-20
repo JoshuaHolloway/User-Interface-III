@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: deepskyblue;
+  margin: 0;
+  height: 1080px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+}
+
+nav {
+  background: gray;
+}
+
+footer {
+  background: gray;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1px;
+  padding: 5px 200px;
+  grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+}
+
+.hero-img {
+  grid-area: A;
+}
+
+.hero-text {
+  grid-area: B;
+}
+
+.C {
+  grid-area: C;
+}
+
+.D {
+  grid-area: D;
+}
+
+.E {
+  grid-area: E;
+}
+
+.F {
+  grid-area: F;
+}
+
+.G {
+  grid-area: G;
+}
+
+.H {
+  grid-area: H;
+}
+
+.I {
+  grid-area: I;
+}
+
+.J {
+  grid-area: J;
+}
+
+.hero-img {
+  background: darkorange;
+}
+
+.hero-text {
+  background: darkorchid;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-text .container {
+  border: dashed white 5px;
+  height: 80%;
+}
+
+.card {
+  background: red;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.card .card__title {
+  border: dashed deepskyblue 2px;
+}
+
+.card .card__title * {
+  margin: 0;
+}
+
+.card .card__img {
+  border: dashed greenyellow 2px;
+  width: 100%;
+  background-image: url("../assets/img/lena.png");
+}
+
+.card .card__supporting-text {
+  border: dashed darkturquoise 2px;
+}
+
+.card .card__actions {
+  border: dashed darkorchid 2px;
+  display: flex;
+}
+
+.card .card__actions .left {
+  border: solid white 2px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card .card__actions .right {
+  border: solid blue 2px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
