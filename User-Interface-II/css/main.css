@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+:root {
+  --nav-background: $nav-background;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -52,7 +56,8 @@ body {
 }
 
 nav {
-  background: gray;
+  background: #212121;
+  color: white;
 }
 
 footer {
@@ -74,6 +79,21 @@ nav {
   padding: 0 2%;
 }
 
+nav:hover a {
+  opacity: 0.5;
+}
+
+nav a {
+  opacity: 1;
+  transition: opacity 0.2s ease, border-bottom 0.9s ease;
+  color: white;
+}
+
+nav a:hover {
+  opacity: 1;
+  border-bottom: solid white 3px;
+}
+
 nav .nav__row {
   border: solid hotpink 2px;
   width: 50%;
@@ -92,8 +112,6 @@ nav .nav__row:nth-child(2) {
 
 nav .nav__row:nth-child(2) a {
   display: inline-block;
-  border: dashed white 1px;
-  background: green;
   height: 50px;
   flex-grow: 1;
   display: grid;

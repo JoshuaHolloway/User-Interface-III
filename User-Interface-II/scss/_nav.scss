@@ -4,6 +4,24 @@ nav {
 
   padding: 0 2%;
 
+  // When hover nav make all a's do this:
+  &:hover a { 
+    opacity: 0.5;
+  }
+  a {  // When not hovering
+    opacity: 1;
+    transition: opacity 0.2s ease, border-bottom 0.9s ease;
+    color: $nav-color;
+    // border: dashed deepskyblue 2px;
+  }
+
+  // To the specific hovering over do this:
+  a:hover { 
+    opacity: 1; // override the nav:hover a
+    
+    border-bottom: solid $nav-color 3px;
+  }
+
   .nav__row {
     border: solid hotpink 2px;
     width: 50%;
@@ -15,14 +33,21 @@ nav {
       padding: 0 1%;
       a {
         display: inline-block;
-        border: dashed white 1px;
-        background: green;
+        // border: dashed white 1px;
         height: 50px;
         flex-grow: 1;
-
         display: grid;
         place-items: center;
+
+        &.active { // Line 
+        }
+        // &:hover  { color: red; }
+        // &:active { color: green; }
+        // &:not(:hover) { background: yellow; }
+        // &:not(:hover) { background: yellow; }
       }
+
+
     }
     
   }

@@ -12,7 +12,8 @@ body {
 }
 
 nav {
-  background: gray;
+  background: $nav-background;
+  color: $nav-color;
 }
 
 footer {
