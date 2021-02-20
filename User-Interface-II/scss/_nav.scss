@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 2%;
+
+  .nav__row {
+    border: solid hotpink 2px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) { flex-grow: 2; }
+    &:nth-child(2) { flex-grow: 1;  
+      padding: 0 1%;
+      a {
+        display: inline-block;
+        border: dashed white 1px;
+        background: green;
+        height: 50px;
+        flex-grow: 1;
+
+        display: grid;
+        place-items: center;
+      }
+    }
+    
+  }
+}
