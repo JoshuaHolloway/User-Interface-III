@@ -5,14 +5,17 @@ const tween = gsap.from('.nav-drawer', {
 });
 
 let count = 0;
-document.querySelector('#play').onclick = () => {
-  if (count % 2 === 0) {
-    console.log('play');
-    tween.play();
-  } else {
-    console.log('reverse');
-    tween.reverse();
-    // tween.restart();
-  }
-  count++;
-};
+const hamburgers = document.querySelectorAll('.hamburger');
+hamburgers.forEach(hamburger => {
+  hamburger.onclick = () => {
+    if (count % 2 === 0) {
+      console.log('play');
+      tween.play();
+    } else {
+      console.log('reverse');
+      tween.reverse();
+      // tween.restart();
+    }
+    count++;
+  };
+});
