@@ -1,6 +1,6 @@
 const template = document.createElement('template');
 template.innerHTML = `
-  <link rel="stylesheet" href="./css/popupNotify_dev.css">
+  <link rel="stylesheet" href="./css/web-comp--nav_dev.css">
   <style> /* TODO: Paste dev CSS here */ </style>
 
   <nav>
