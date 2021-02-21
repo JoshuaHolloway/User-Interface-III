@@ -1,6 +1,6 @@
-const tween = gsap.from('.nav-drawer', {
+const tween = gsap.to('.nav-drawer', {
     duration: 0.35,
-    x: '-100px',
+    x: '200px',
     paused: true
 });
 
