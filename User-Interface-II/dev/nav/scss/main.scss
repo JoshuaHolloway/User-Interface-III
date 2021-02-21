@@ -4,23 +4,25 @@ body {
   padding: 0;
 }
 
-.hamburger-container {
-  border: dashed white 4px;
-  // height/width set in specific place used
-  .hamburger {
-    height: 100%;
-    width: 100%;
-    background: yellowgreen;
+.hamburger {
+  &.play-1 {
+    width: 50px;
+    height: 50px;
   }
+  &.play-2 {
+    width: 70px;
+    height: 70px;
+  }
+  border: solid white 3px;
+  background: deepskyblue;
 }
-
 
 nav {
   height: 100px;
   width: 100vw;
   display: grid;
   grid-template-rows: 1fr;
-  background: deepskyblue;
+  background: gray;
   
   .nav__left  { 
     height: 100%;
@@ -50,10 +52,7 @@ nav {
         display: grid;
         place-items: center;
 
-        .hamburger-container {
-          height: 50px;
-          width: 50px;
-        }
+
       }
     }
     .bottom {
@@ -83,10 +82,7 @@ nav {
     align-items: center;
     padding-right: 2%;
 
-    .hamburger-container {
-      height: 60px;
-      width: 60px;
-    }
+
   }
 
   @media screen and (max-width: 775px) {
@@ -106,7 +102,7 @@ nav {
     .nav__left {
       .top {
         .right {
-          .hamburger-container { visibility: hidden; }
+          .hamburger { visibility: hidden; }
         }
       }
     }
