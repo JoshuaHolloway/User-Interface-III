@@ -7,24 +7,92 @@ body {
   padding: 0;
 }
 
+.hamburger-container {
+  border: dashed white 4px;
+}
+
+.hamburger-container .hamburger {
+  height: 100%;
+  width: 100%;
+  background: yellowgreen;
+}
+
 nav {
+  height: 100px;
   width: 100vw;
   display: grid;
   grid-template-rows: 1fr;
-  height: 100px;
   background: deepskyblue;
 }
 
 nav .nav__left {
   height: 100%;
-  border: solid hotpink 5px;
+  border: solid hotpink 2px;
   grid-area: navLeft;
+  display: flex;
+  flex-direction: column;
+}
+
+nav .nav__left .top {
+  background: green;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+}
+
+nav .nav__left .top .left {
+  flex-grow: 1;
+  background: darkorange;
+  display: grid;
+  place-items: center;
+}
+
+nav .nav__left .top .left h1 {
+  margin: 0;
+}
+
+nav .nav__left .top .right {
+  flex-grow: 1;
+  background: darkorchid;
+  display: grid;
+  place-items: center;
+}
+
+nav .nav__left .top .right .hamburger-container {
+  height: 50px;
+  width: 50px;
+}
+
+nav .nav__left .bottom {
+  flex-grow: 1;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-evenly;
+  background: red;
+  width: 100%;
+}
+
+nav .nav__left .bottom a {
+  background: green;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  width: 80px;
 }
 
 nav .nav__right {
   height: 100%;
-  border: solid darkorange 5px;
+  border: solid darkorange 2px;
   grid-area: navRight;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2%;
+}
+
+nav .nav__right .hamburger-container {
+  height: 60px;
+  width: 60px;
 }
 
 @media screen and (max-width: 775px) {
@@ -39,7 +107,10 @@ nav .nav__right {
 
 @media screen and (min-width: 776px) {
   nav {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas: "navLeft navRight";
+  }
+  nav .nav__left .top .right .hamburger-container {
+    visibility: hidden;
   }
 }
