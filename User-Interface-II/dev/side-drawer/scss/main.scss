@@ -1,0 +1,23 @@
+$drawer-width: 200px;
+$drawer-width-neg: -100px;
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.container {
+  position: relative;
+  .nav-drawer {
+    position: absolute;
+    left: $drawer-width-neg;
+    height: 100vh;
+    width: $drawer-width;
+    background: darkorchid;
+  }
+
+  button {
+    position: absolute;
+    right: 50%;
+    background: hotpink;
+    color: white;
+  }
+}
