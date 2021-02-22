@@ -4,6 +4,8 @@ body {
   padding: 0;
 }
 
+@import 'side-drawer';
+
 .hamburger {
   &.play-1 {
     width: 50px;
