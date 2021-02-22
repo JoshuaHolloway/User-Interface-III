@@ -7,9 +7,10 @@ const tween = gsap.to('.nav-drawer', {
 
 let count = 0;
 const hamburgers = document.querySelectorAll('.hamburger');
-hamburgers.forEach(hamburger => {
+hamburgers.forEach((hamburger, hamburger_idx) => {
   
-  hamburger.onclick = () => {
+  const animate_nav_drawer = () => {
+    console.log('clicked hamburger ', count);
     if (count % 2 === 0) {
       console.log('play');
       tween.play();
@@ -18,83 +19,55 @@ hamburgers.forEach(hamburger => {
       tween.reverse();
       // tween.restart();
     }
+    count++;
+  };
+ 
+  const animate_hamburger_lines = () => {
 
-    console.log('clicked hamburger ', count);
+    console.log(`hamburger ${hamburger_idx}`);
 
     tl.restart();
 
-    const play_line1 = ((tl) => {
-      tl.to('.play-1 .line-1', {
-          duration: 0.25,
-          y: +11,
-          ease: Strong.easeInOut
-        }, 0
-      );
-      tl.to('.play-1 .line-3', {
-          duration: 0.25,
-          y: -11,
-          ease: Strong.easeInOut
-        }, 0
-      );
+    let y_dx = null;
+    if (hamburger_idx === 0)      { y_dx = 11; } // Mobile hamburger
+    else if (hamburger_idx === 1) { y_dx = 15;} // Desktop hamburger
 
-      tl.to('.play-1 line', {
-          duration: 0.25,
-          rotation: 360,
-          transformOrigin:"50% 50%",
-          ease: Strong.easeInOut
-        }, 0.25
-      );
+    tl.to('.line-1', {
+        duration: 0.25,
+        y: +y_dx,
+        ease: Strong.easeInOut
+      }, 0
+    );
+    tl.to('.line-3', {
+        duration: 0.25,
+        y: -y_dx,
+        ease: Strong.easeInOut
+      }, 0
+    );
 
-      tl.to('.play-1 .line-1', {
-          duration: 0.25,
-          y: 0,
-          ease: Strong.easeInOut
-        }, 0.5
-      );
-      tl.to('.play-1 .line-3', {
-          duration: 0.25,
-          y: 0,
-          ease: Strong.easeInOut
-        }, 0.5
-      );
-    })(tl);
+    tl.to('line', {
+        duration: 0.25,
+        rotation: 360,
+        transformOrigin:"50% 50%",
+        ease: Strong.easeInOut
+      }, 0.25
+    );
 
-    const play_line2 = ((tl) => {
-      tl.to('.play-2 .line-1', {
-          duration: 0.25,
-          y: +15,
-          ease: Strong.easeInOut
-        }, 0
-      );
-      tl.to('.play-2 .line-3', {
-          duration: 0.25,
-          y: -15,
-          ease: Strong.easeInOut
-        }, 0
-      );
-
-      tl.to('.play-2 line', {
-          duration: 0.25,
-          rotation: 360,
-          transformOrigin:"50% 50%",
-          ease: Strong.easeInOut
-        }, 0.25
-      );
-
-      tl.to('.play-2 .line-1', {
-          duration: 0.25,
-          y: 0,
-          ease: Strong.easeInOut
-        }, 0.5
-      );
-      tl.to('.play-2 .line-3', {
-          duration: 0.25,
-          y: 0,
-          ease: Strong.easeInOut
-        }, 0.5
-      );
-    })(tl);
-
-    count++;
+    tl.to('.line-1', {
+        duration: 0.25,
+        y: 0,
+        ease: Strong.easeInOut
+      }, 0.5
+    );
+    tl.to('.line-3', {
+        duration: 0.25,
+        y: 0,
+        ease: Strong.easeInOut
+      }, 0.5
+    );
   };
+
+
+  hamburger.addEventListener('click', animate_nav_drawer);
+  hamburger.addEventListener('click', animate_hamburger_lines);
 });
