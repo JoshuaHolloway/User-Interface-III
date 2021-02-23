@@ -1,9 +1,10 @@
-const tl = gsap.timeline();
-const tween = gsap.to('.nav-drawer', {
-    duration: 0.5,
-    x: '200px',
-    paused: true
-});
+// const tl = gsap.timeline();
+const tl_side_drawer = gsap.timeline();
+// const tween = gsap.to('.nav-drawer', {
+//     duration: 0.5,
+//     x: '200px',
+//     paused: true
+// });
 
 let count = 0;
 const hamburgers = document.querySelectorAll('.hamburger');
@@ -13,14 +14,35 @@ hamburgers.forEach((hamburger, hamburger_idx) => {
     console.log('clicked hamburger ', count);
     if (count % 2 === 0) {
       console.log('play');
-      tween.play();
+      // tween.play();
+
+      // -Restarts, including any delay, and doesn't suppress 
+      //  events during the initial move back to time:0
+      // ( https://greensock.com/docs/v3/GSAP/Timeline/restart() )
+      // tl_side_drawer.restart(true, false);
+      tl_side_drawer.restart();
+      tl_side_drawer.to('.nav-drawer', {
+        duration: 0.5,
+        x: '200px',
+        ease: Strong.easeInOut
+      }).from('.nav-drawer__links', {
+        duration: 1.5,
+        y: '35px',
+        ease: Strong.easeInOut,
+        stagger: 0.2,
+      });
+
+      // tl_side_drawer.play();
     } else {
       console.log('reverse');
-      tween.reverse();
-      // tween.restart();
+    
+      // tween.reverse();
+      tl_side_drawer.reverse();
     }
     count++;
   };
+
+  
  
   const animate_hamburger_lines = () => {
 
@@ -95,5 +117,5 @@ hamburgers.forEach((hamburger, hamburger_idx) => {
 
 
   hamburger.addEventListener('click', animate_nav_drawer);
-  hamburger.addEventListener('click', animate_hamburger_lines);
+  // hamburger.addEventListener('click', animate_hamburger_lines);
 });

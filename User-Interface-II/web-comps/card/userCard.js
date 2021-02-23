@@ -15,7 +15,11 @@ template.innerHTML = `
   <main id="card">
     <section id="primary-title">
       <div class="left">
-        <img src="./icon.svg" alt="">
+        <!-- <img src="./icon.svg" alt=""> -->
+        <img src="icon.svg">
+        <!-- NOTE: This path is in reference to the .html file -->
+        <!-- -By placing the icon.svg file into the location of the main root index.html file it works in main index.html -->
+
       </div>
       <div class="right">
         <div class="top">

@@ -286,52 +286,6 @@ nav .hamburger {
   width: 30%;
 }
 
-.card {
-  background: red;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-.card .card__title {
-  border: dashed deepskyblue 2px;
-}
-
-.card .card__title * {
-  margin: 0;
-}
-
-.card .card__img {
-  border: dashed greenyellow 2px;
-  width: 100%;
-  background-image: url("../assets/img/lena.png");
-}
-
-.card .card__supporting-text {
-  border: dashed darkturquoise 2px;
-}
-
-.card .card__actions {
-  border: dashed darkorchid 2px;
-  display: flex;
-}
-
-.card .card__actions .left {
-  border: solid white 2px;
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.card .card__actions .right {
-  border: solid blue 2px;
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 footer {
   color: white;
   display: flex;

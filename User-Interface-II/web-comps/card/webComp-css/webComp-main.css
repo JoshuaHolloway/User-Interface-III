@@ -110,7 +110,16 @@ main#card section#primary-title .right .bottom {
 main#card section#img {
   grid-area: img;
   background: black;
-  background-image: url("../img/lena.png");
+  
+  /* background-image: url("lena.png");  */
+  /* WORKS from index.html file in card/ */
+
+  /* background-image: url("/webComp-css/lena.png"); */
+  /* WORKS when VS-Code is opened with root as /card/ */
+
+  background-image: url("/web-comps/card/webComp-css/lena.png");
+
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
