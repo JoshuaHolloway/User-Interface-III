@@ -64,7 +64,7 @@ main#card section#primary-title {
 }
 
 main#card section#primary-title .left {
-  border: dashed white 2px;
+  border: none;
   width: 75px;
   display: flex;
   justify-content: center;
@@ -73,20 +73,24 @@ main#card section#primary-title .left {
 
 main#card section#primary-title .right {
   flex-grow: 1;
-  border: dashed white 2px;
+  border: none;
   display: flex;
   flex-direction: column;
 }
 
 main#card section#primary-title .right .top {
   flex-grow: 1;
-  border: dashed lightgreen 2px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5px;
+  border: none;
   color: #BB86FC;
 }
 
 main#card section#primary-title .right .bottom {
   flex-grow: 1;
-  border: dashed lightpink 2px;
+  display: flex;
+  border: none;
   color: #03DAC5;
 }
 
@@ -105,11 +109,19 @@ main#card section#supporting-text {
   color: white;
   display: grid;
   place-items: center;
+  position: relative;
 }
 
 main#card section#supporting-text .container {
   width: 90%;
-  border: dashed white 2px;
+  border: none;
+}
+
+main#card section#supporting-text .container-for-bottom-border {
+  position: absolute;
+  height: 100%;
+  width: 94%;
+  border-bottom: solid gray 1px;
 }
 
 main#card section#actions {
@@ -118,35 +130,37 @@ main#card section#actions {
   display: flex;
 }
 
-main#card section#actions .container {
-  border: dashed white 2px;
-}
-
 main#card section#actions .left {
-  flex-grow: 1;
+  flex-grow: 0.5;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: dashed blue 2px;
+  border: none;
 }
 
 main#card section#actions .left .container {
-  width: 80%;
+  border: none;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 main#card section#actions .right {
   flex-grow: 1;
-  border: dashed green 2px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
 main#card section#actions .right .container {
+  border: none;
   width: 80%;
   display: flex;
   justify-content: space-evenly;
+}
+
+main#card section#actions .right .container svg {
+  color: white;
 }
