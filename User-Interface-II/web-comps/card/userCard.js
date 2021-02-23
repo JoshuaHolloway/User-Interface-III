@@ -1,15 +1,6 @@
 const template = document.createElement('template');
 template.innerHTML = `
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-  </style>
-  
   <link rel="stylesheet" href="./webComp-css/webComp-main.css">
-
-
 
   <!--  
   <div class="user-card">
