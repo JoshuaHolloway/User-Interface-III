@@ -7,12 +7,12 @@ body {
   padding: 0;
 }
 
-.container {
+._container {
   height: 100vh;
   position: fixed;
 }
 
-.container .nav-drawer {
+._container ._nav-drawer {
   position: absolute;
   left: -200px;
   height: 100vh;
@@ -20,14 +20,14 @@ body {
   background: darkorchid;
 }
 
-.container .nav-drawer .nav-container {
+._container ._nav-drawer ._nav-container {
   border: solid white 2px;
   overflow: hidden;
   height: 30px;
   text-align: center;
 }
 
-.container .nav-drawer .nav-container a {
+._container ._nav-drawer ._nav-container a {
   height: 25px;
   display: inline-block;
   color: white;
@@ -35,17 +35,17 @@ body {
   border: solid hotpink 2px;
 }
 
-.hamburger {
+._hamburger {
   border: solid white 3px;
   background: deepskyblue;
 }
 
-.hamburger.play-1 {
+._hamburger._play-1 {
   width: 50px;
   height: 50px;
 }
 
-.hamburger.play-2 {
+._hamburger._play-2 {
   width: 70px;
   height: 70px;
 }
@@ -58,40 +58,40 @@ nav {
   background: gray;
 }
 
-nav .nav__left {
+nav ._nav__left {
   height: 100%;
   border: solid hotpink 2px;
-  grid-area: navLeft;
+  grid-area: _navLeft;
   display: flex;
   flex-direction: column;
 }
 
-nav .nav__left .top {
+nav ._nav__left ._top {
   background: green;
   flex-grow: 1;
   width: 100%;
   display: flex;
 }
 
-nav .nav__left .top .left {
+nav ._nav__left ._top ._left {
   flex-grow: 1;
   background: darkorange;
   display: grid;
   place-items: center;
 }
 
-nav .nav__left .top .left h1 {
+nav ._nav__left ._top ._left h1 {
   margin: 0;
 }
 
-nav .nav__left .top .right {
+nav ._nav__left ._top ._right {
   flex-grow: 1;
   background: darkorchid;
   display: grid;
   place-items: center;
 }
 
-nav .nav__left .bottom {
+nav ._nav__left ._bottom {
   flex-grow: 1;
   padding: 0 5%;
   display: flex;
@@ -100,7 +100,7 @@ nav .nav__left .bottom {
   width: 100%;
 }
 
-nav .nav__left .bottom a {
+nav ._nav__left ._bottom a {
   background: green;
   padding: 5px;
   display: grid;
@@ -108,10 +108,10 @@ nav .nav__left .bottom a {
   width: 60px;
 }
 
-nav .nav__right {
+nav ._nav__right {
   height: 100%;
   border: solid darkorange 2px;
-  grid-area: navRight;
+  grid-area: _navRight;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -121,9 +121,9 @@ nav .nav__right {
 @media screen and (max-width: 775px) {
   nav {
     grid-template-columns: 1fr;
-    grid-template-areas: "navLeft";
+    grid-template-areas: "_navLeft";
   }
-  nav .nav__right {
+  nav ._nav__right {
     display: none;
   }
 }
@@ -131,9 +131,9 @@ nav .nav__right {
 @media screen and (min-width: 776px) {
   nav {
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: "navLeft navRight";
+    grid-template-areas: "_navLeft _navRight";
   }
-  nav .nav__left .top .right .hamburger {
+  nav ._nav__left ._top ._right ._hamburger {
     visibility: hidden;
   }
 }

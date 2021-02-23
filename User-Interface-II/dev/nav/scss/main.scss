@@ -6,12 +6,12 @@ body {
 
 @import 'side-drawer';
 
-.hamburger {
-  &.play-1 {
+._hamburger {
+  &._play-1 {
     width: 50px;
     height: 50px;
   }
-  &.play-2 {
+  &._play-2 {
     width: 70px;
     height: 70px;
   }
@@ -26,20 +26,20 @@ nav {
   grid-template-rows: 1fr;
   background: gray;
   
-  .nav__left  { 
+  ._nav__left  { 
     height: 100%;
     border: solid hotpink 2px;
-    grid-area: navLeft;
+    grid-area: _navLeft;
 
     display: flex;
     flex-direction: column;
 
-    .top { 
+    ._top { 
       background: green; 
       flex-grow: 1;
       width: 100%;
       display: flex;
-      .left { 
+      ._left { 
         flex-grow: 1;
         background: darkorange;
         display: grid;
@@ -47,7 +47,7 @@ nav {
 
         h1 { margin: 0; }
       }
-      .right {
+      ._right {
         flex-grow: 1;
         background: darkorchid;
 
@@ -57,7 +57,7 @@ nav {
 
       }
     }
-    .bottom {
+    ._bottom {
       flex-grow: 1;
       padding: 0 5%;
       display: flex;
@@ -74,10 +74,10 @@ nav {
       }
     }
   }
-  .nav__right {
+  ._nav__right {
     height: 100%;
     border: solid darkorange 2px;
-    grid-area: navRight;
+    grid-area: _navRight;
 
     display: flex;
     justify-content: flex-end;
@@ -91,20 +91,20 @@ nav {
     & {
       grid-template-columns: 1fr;
       grid-template-areas: 
-        "navLeft"
+        "_navLeft"
     }
-    .nav__right { display: none; }
+    ._nav__right { display: none; }
   }
   @media screen and (min-width: 776px) {
     & {
       grid-template-columns: 1fr 2fr;
       grid-template-areas: 
-      "navLeft navRight";
+      "_navLeft _navRight";
     }
-    .nav__left {
-      .top {
-        .right {
-          .hamburger { visibility: hidden; }
+    ._nav__left {
+      ._top {
+        ._right {
+          ._hamburger { visibility: hidden; }
         }
       }
     }

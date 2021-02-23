@@ -7,7 +7,7 @@ const tl_side_drawer = gsap.timeline();
 // });
 
 let count = 0;
-const hamburgers = document.querySelectorAll('.hamburger');
+const hamburgers = document.querySelectorAll('._hamburger');
 hamburgers.forEach((hamburger, hamburger_idx) => {
   
   const animate_nav_drawer = () => {
@@ -21,11 +21,11 @@ hamburgers.forEach((hamburger, hamburger_idx) => {
       // ( https://greensock.com/docs/v3/GSAP/Timeline/restart() )
       // tl_side_drawer.restart(true, false);
       tl_side_drawer.restart();
-      tl_side_drawer.to('.nav-drawer', {
+      tl_side_drawer.to('._nav-drawer', {
         duration: 0.5,
         x: '200px',
         ease: Strong.easeInOut
-      }).from('.nav-drawer__links', {
+      }).from('._nav-drawer__links', {
         duration: 1.5,
         y: '35px',
         ease: Strong.easeInOut,
@@ -64,7 +64,7 @@ hamburgers.forEach((hamburger, hamburger_idx) => {
     if (hamburger_idx === 0) {
       // Close button on nav-drawer
 
-      tl.to('.x-lines', {
+      tl.to('._x-lines', {
           duration: 0.25,
           rotation: 180,
           transformOrigin:"50% 50%",
@@ -78,20 +78,20 @@ hamburgers.forEach((hamburger, hamburger_idx) => {
       if (hamburger_idx === 1)      y_dx = 11; // Mobile hamburger
       else if (hamburger_idx === 2) y_dx = 15; // Desktop hamburger
 
-      tl.to('.line-1', {
+      tl.to('._line-1', {
           duration: 0.25,
           y: +y_dx,
           ease: Strong.easeInOut
         }, 0
       );
-      tl.to('.line-3', {
+      tl.to('._line-3', {
           duration: 0.25,
           y: -y_dx,
           ease: Strong.easeInOut
         }, 0
       );
   
-      tl.to('.lines', {
+      tl.to('._lines', {
           duration: 0.25,
           rotation: 360,
           transformOrigin:"50% 50%",
@@ -99,13 +99,13 @@ hamburgers.forEach((hamburger, hamburger_idx) => {
         }, 0.25
       );
   
-      tl.to('.line-1', {
+      tl.to('._line-1', {
           duration: 0.25,
           y: 0,
           ease: Strong.easeInOut
         }, 0.5
       );
-      tl.to('.line-3', {
+      tl.to('._line-3', {
           duration: 0.25,
           y: 0,
           ease: Strong.easeInOut

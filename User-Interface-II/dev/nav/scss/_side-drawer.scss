@@ -1,10 +1,10 @@
 $drawer-width: 200px;
 $drawer-width-neg: -200px;
 
-.container {
+._container {
   height: 100vh;
   position: fixed;
-  .nav-drawer {
+  ._nav-drawer {
     position: absolute;
     left: $drawer-width-neg;
     height: 100vh;
@@ -14,7 +14,7 @@ $drawer-width-neg: -200px;
     // display: grid;
     // place-items: center;
 
-    .nav-container {
+    ._nav-container {
 
       border: solid white 2px;
       overflow: hidden;
