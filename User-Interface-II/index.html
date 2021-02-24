@@ -8,79 +8,118 @@
 </head>
 <body>
 
-    <nav>
-      <div class="left">
-        <div class="nav__row top">
-          <h1>Josh Holloway</h1>
-          <div class="hamburger-container">
-            <div class="hamburger-debug"></div>
-          </div>
-        </div>
+  <div class="_container">
+    <div class="_nav-drawer">
 
-        <div class="nav__row bottom">
-          <a class="active" href="#">Home</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-          <a href="/projects">Projects</a>
-        </div>
+      <div class="_nav-container">
+        <a class="_nav-drawer__links" href="#">Link-1</a>
       </div>
-      <div class="right">
-        <div class="hamburger">
-          <svg height="210" width="100">
-            <line class="line-1" 
-                  x1="10%" y1="20" x2="60%" y2="20"
-                  style="stroke:rgb(255,255,255); stroke-width:5" />
-            <line class="line-2"
-                  x1="10%" y1="35" x2="60%" y2="35"
-                  style="stroke:rgb(255,255,255); stroke-width:5" />
-            <line class="line-3"
-                  x1="10%" y1="50" x2="60%" y2="50"
-                  style="stroke:rgb(255,255,255); stroke-width:5" />
+
+      <div class="_nav-container">
+        <a class="_nav-drawer__links" href="#">Link-2</a>
+      </div>
+
+
+      <div class="_close-button-container">
+        <div class="_hamburger _close">
+          <svg height="50" width="50">
+            <line class="_x-lines _x-line-1" 
+                  x1="20%" y1="25%" x2="80%" y2="85%"
+                  style="stroke:rgb(255,255,255); stroke-width:4" />
+            <line class="_x-lines _x-line-2"
+                  x1="20%" y1="85%" x2="80%" y2="25%"
+                  style="stroke:rgb(255,255,255); stroke-width:4" />
           </svg>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
 
-    <main>
-      <div class="hero-img"></div>
-      <div class="hero-text">
-        <div class="container">
-          <h2>Josh Holloway</h2>
-          <div>
-            <button>My Projects</button>
-          </div>
-          <p>
-            Here are some words about me and my journey in coding so far. Thesee words are authentic and inspiring. These words tell my story.
-          </p>
+  <nav>
+    <div class="_nav__left">
+      <div class="_top">
+        <div class="_left">
+          <h1>Josh Holloway</h1>
         </div>
+        <div class="_right">
 
+          <div class="_hamburger _play-1">
+            <svg height="50" width="50">
+              <line class="_lines _line-1" 
+                    x1="10%" y1="22.5%" x2="80%" y2="22.5%"
+                    style="stroke:rgb(255,255,255); stroke-width:4" />
+              <line class="_lines _line-2"
+                    x1="10%" y1="45%" x2="80%" y2="45%"
+                    style="stroke:rgb(255,255,255); stroke-width:4" />
+              <line class="_lines _line-3"
+                    x1="10%" y1="67.5%" x2="80%" y2="67.5%"
+                    style="stroke:rgb(255,255,255); stroke-width:4" />
+            </svg>
+          </div>
+
+        </div>
+      </div>
+      <div class="_bottom">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="_nav__right">
+
+      <div class="_hamburger _play-2">
+        <svg height="70" width="70">
+          <line class="_lines _line-1" 
+                x1="10%" y1="22.5%" x2="80%" y2="22.5%"
+                style="stroke:rgb(255,255,255); stroke-width:5" />
+          <line class="_lines _line-2"
+                x1="10%" y1="45%" x2="80%" y2="45%"
+                style="stroke:rgb(255,255,255); stroke-width:5" />
+          <line class="_lines _line-3"
+                x1="10%" y1="67.5%" x2="80%" y2="67.5%"
+                style="stroke:rgb(255,255,255); stroke-width:5" />
+        </svg>
       </div>
 
-      <div class="card C">
-        <user-card>
-        </user-card>
+    </div>
+  </nav>
 
-
+  <main>
+    <div class="hero-img"></div>
+    <div class="hero-text">
+      <div class="container">
+        <h2>Josh Holloway</h2>
+        <div>
+          <button>My Projects</button>
+        </div>
+        <p>
+          Here are some words about me and my journey in coding so far. Thesee words are authentic and inspiring. These words tell my story.
+        </p>
       </div>
-      <div class="card D"></div>
-      <div class="card E"></div>
-      <div class="card F"></div>
-      <div class="card G"></div>
-      <div class="card H"></div>
-      <div class="card I"></div>
-      <div class="card J"></div>
-    </main>
 
-    <footer>
-      <h5>Like what you see?</h5>
-      <div>
-        <button>Contact Me</button>
-      </div>
-    </footer>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script type="module" src="./web-comps/card/userCard.js"></script>
+    <div class="card C"><user-card></user-card></div>
+    <div class="card D"><user-card></user-card></div>
+    <div class="card E"><user-card></user-card></div>
+    <div class="card F"><user-card></user-card></div>
+    <div class="card G"><user-card></user-card></div>
+    <div class="card H"><user-card></user-card></div>
+    <div class="card I"><user-card></user-card></div>
+    <div class="card J"><user-card></user-card></div>
+  </main>
+
+  <footer>
+    <h5>Like what you see?</h5>
+    <div>
+      <button>Contact Me</button>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+  <script src="./js/nav.js"></script>
+  <script type="module" src="./web-comps/card/userCard.js"></script>
 
 </body>
 </html>

@@ -111,13 +111,13 @@ main#card section#img {
   grid-area: img;
   background: black;
   
-  /* background-image: url("lena.png");  */
+  background-image: url("lena.png"); 
   /* WORKS from index.html file in card/ */
 
   /* background-image: url("/webComp-css/lena.png"); */
   /* WORKS when VS-Code is opened with root as /card/ */
 
-  background-image: url("/web-comps/card/webComp-css/lena.png");
+  /* background-image: url("/web-comps/card/webComp-css/lena.png"); */
 
 
   background-size: cover;
