@@ -10,7 +10,7 @@
   justify-content: flex-end;
 
   .container {
-    border: dashed white 5px;
+    // border: dashed white 5px;
     height: 80%;
 
     display: flex;
@@ -18,7 +18,7 @@
     justify-content: space-evenly;
 
     > div {
-      border: solid hotpink 2px;
+      // border: solid hotpink 2px;
       > button {
         width: 30%;
       }

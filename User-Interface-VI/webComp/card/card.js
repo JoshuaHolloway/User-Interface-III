@@ -116,7 +116,7 @@ template.innerHTML = `
       grid-area: img;
       background: black;
     
-      background-image: url("./webComp/card/lena.png");
+      background-image: url("./webComp/card/puppy.jpg");
       // NOTE: ./ refers to location of index.html file that loads in the .js file for this web-comp!
 
 
@@ -211,10 +211,14 @@ template.innerHTML = `
       </div>
       <div class="right">
         <div class="top">
-          <h2>Title goes here</h2>
+          <h2>
+            <slot name="title" />
+          </h2>
         </div>
         <div class="bottom">
-          <h5>Secondary text</h5>
+          <h5>
+            <slot name="sub-title" />
+          </h5>
         </div>
       </div>
     </section>
@@ -224,7 +228,9 @@ template.innerHTML = `
 
     <section id="supporting-text">
       <div class="container">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi enim iste sed reprehenderit sit molestiae.</p>
+        <p>
+          <slot name="text" />
+        </p>
       </div>
 
       <div class="container-for-bottom-border"></div>
@@ -233,8 +239,12 @@ template.innerHTML = `
     <section id="actions">
       <div class="left">
         <div class="container">
-          <a href="#">ACTION 1</a>
-          <a href="#">ACTION 2</a>
+          <a id="link-1">
+            <slot name="linkName-1" />
+          </a>
+          <a id="link-2">
+            <slot name="linkName-2" />
+          </a>
         </div>
       </div>
       <div class="right">
@@ -267,6 +277,13 @@ class Card extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     // this.shadowRoot.querySelector('h3').innerText = `${this.getAttribute('name')}`;
     // this.shadowRoot.querySelector('img').src = this.getAttribute('avatar');
+
+    const links = this.getAttribute('links');
+    console.log('links: ', links);
+
+    // <a id="link-1"></a>
+    this.shadowRoot.querySelector('#link-1').href = links[0];
+    this.shadowRoot.querySelector('#link-2').href = links[1];
 
     // This uses regular DOM - no encapsulation!
     // this.innerHTML = `<h3>${this.getAttribute('name')}</h3>`;
