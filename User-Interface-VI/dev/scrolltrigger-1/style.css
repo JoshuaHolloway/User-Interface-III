@@ -1,0 +1,34 @@
+.Box {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+}
+
+.A { background: deeppink; }
+.A2 { background: darkorange; }
+.A3 { background: darkorchid; }
+.B { background: deepskyblue; }
+.C { background: darkorchid; }
+
+section.hero {
+  height: 100vh;
+  width: 100vh;
+  background: lightblue;
+}
+
+.left {
+  height: 100px;
+  width: 100px;
+  background: green;
+  display: inline-block;
+}
+.right {
+  height: 100px;
+  width: 100px;
+  background: red;
+  display: inline-block;
+}
