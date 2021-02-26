@@ -10,7 +10,7 @@ body {
 }
 
 main {
-  margin-top: calc(100px + 1%);
+  margin-top: calc(0px + 1%);
 }
 
 nav {
@@ -63,9 +63,118 @@ nav {
 body {
   background: deepskyblue;
   margin: 0;
-  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 100px 1080px 100px;
   grid-template-areas: "nav" "main" "footer";
+}
+
+body nav {
+  grid-area: nav;
+}
+
+body footer {
+  grid-area: footer;
+}
+
+body main {
+  grid-area: main;
+  display: grid;
+  gap: 1px;
+  padding: 5px 200px;
+}
+
+@media screen and (max-width: 766px) {
+  body main {
+    border: dashed green 5px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-areas: "A" "B" "C" "D" "E" "F" "G" "H" "I" "J";
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  body main {
+    border: dashed red 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: "A A" "A A" "B B" "B B" "C D" "E F" "G H" "I J";
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body main {
+    border: dashed blue 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+  }
+}
+
+body main .hero-img {
+  grid-area: A;
+}
+
+body main .hero-text {
+  grid-area: B;
+}
+
+body main .C {
+  grid-area: C;
+}
+
+body main .D {
+  grid-area: D;
+}
+
+body main .E {
+  grid-area: E;
+}
+
+body main .F {
+  grid-area: F;
+}
+
+body main .G {
+  grid-area: G;
+}
+
+body main .H {
+  grid-area: H;
+}
+
+body main .I {
+  grid-area: I;
+}
+
+body main .J {
+  grid-area: J;
+}
+
+.hero-img {
+  background: darkorange;
+}
+
+.hero-text {
+  background: darkorchid;
+  padding: 0 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-text .container {
+  border: dashed white 5px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hero-text .container > div {
+  border: solid hotpink 2px;
+}
+
+.hero-text .container > div > button {
+  width: 30%;
 }
