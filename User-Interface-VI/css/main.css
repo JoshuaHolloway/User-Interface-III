@@ -44,17 +44,6 @@ button {
   border-radius: 4px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: deepskyblue;
-  height: 100vh;
-}
-
 main {
   margin-top: calc(0px + 1%);
 }
@@ -79,7 +68,7 @@ nav {
   transform: translateX(-100px);
   height: calc(100vh - 0px);
   width: 100px;
-  background: red;
+  background: gray;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -107,7 +96,7 @@ nav {
 }
 
 body {
-  background: deepskyblue;
+  background: black;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -132,7 +121,6 @@ body main {
 
 @media screen and (max-width: 766px) {
   body main {
-    border: dashed green 5px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(16, 1fr);
     grid-template-areas: "A" "B" "C" "D" "E" "F" "G" "H" "I" "J";
@@ -141,7 +129,6 @@ body main {
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
   body main {
-    border: dashed red 5px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(8, 1fr);
     grid-template-areas: "A A" "A A" "B B" "B B" "C D" "E F" "G H" "I J";
@@ -150,7 +137,6 @@ body main {
 
 @media screen and (min-width: 992px) {
   body main {
-    border: dashed blue 5px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
@@ -225,8 +211,13 @@ body main .J {
   width: 30%;
 }
 
+.card {
+  border: solid white 1px;
+}
+
 footer {
-  color: white;
+  background: lightgreen;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

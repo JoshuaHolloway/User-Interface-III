@@ -6,16 +6,7 @@ $navDrawer-height: calc(100vh - 0px);
 $main-offset: calc(0px + 1%);
 $hamburger-height: 75px;
 $boxContainer-height: 50px;
-* { 
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body { 
-  background: deepskyblue;
-  height: $body-height;
-  // border: dashed hotpink 3px;
-}
+
 main { // Offset for fixed-nav
   margin-top: $main-offset;
   // -Where the main section is placed is in 
@@ -42,7 +33,7 @@ nav { // Fixed
   transform: translateX(-100px);
   height: $navDrawer-height;
   width: 100px;
-  background: red;
+  background: gray;
 
   display: flex;
   flex-direction: column;
