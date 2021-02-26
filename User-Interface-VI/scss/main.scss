@@ -1,5 +1,9 @@
-@import 'nav';
 $main-height-lg: 1400px;
+@import 'global';
+@import 'nav';
+* {
+
+}
 
 body {
   background: deepskyblue;
@@ -100,4 +104,6 @@ body {
     .J { grid-area: J }
   }
 }
+
 @import 'hero';
+@import 'footer';
