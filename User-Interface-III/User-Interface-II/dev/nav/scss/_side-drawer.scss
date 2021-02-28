@@ -1,0 +1,36 @@
+$drawer-width: 200px;
+$drawer-width-neg: -200px;
+
+._container {
+  height: 100vh;
+  position: fixed;
+  ._nav-drawer {
+    position: absolute;
+    left: $drawer-width-neg;
+    height: 100vh;
+    width: $drawer-width;
+    background: darkorchid;
+    
+    // display: grid;
+    // place-items: center;
+
+    ._nav-container {
+
+      border: solid white 2px;
+      overflow: hidden;
+
+      height: 30px;
+      text-align: center;
+
+      a {
+        height: 25px;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        border: solid hotpink 2px;
+      }
+    }
+
+
+  }
+}

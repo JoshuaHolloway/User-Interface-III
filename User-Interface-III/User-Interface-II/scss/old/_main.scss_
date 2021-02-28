@@ -1,0 +1,40 @@
+.hero-img { grid-area: A; }
+.hero-text { grid-area: B; }
+.C { grid-area: C }
+.D { grid-area: D }
+.E { grid-area: E }
+.F { grid-area: F }
+.G { grid-area: G }
+.H { grid-area: H }
+.I { grid-area: I }
+.J { grid-area: J }
+
+.hero-img {
+  background: darkorange;
+}
+
+.hero-text {
+  background: darkorchid;
+  padding: 0 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .container {
+    border: dashed white 5px;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    > div {
+      border: solid hotpink 2px;
+      > button {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@import 'card';

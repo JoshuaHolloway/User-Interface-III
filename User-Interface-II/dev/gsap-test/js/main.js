@@ -6,11 +6,13 @@ const is_even = (x) => {
     return false;
 };
 
-const tl = gsap.timeline();
+// const tl = gsap.timeline();
+let tl;
 const do_animation = () => {
   if (is_even(count)) {
 
-    tl.restart();
+    // tl.restart();
+    tl = gsap.timeline();
 
     tl
     .to('.line-2',       {duration: 1, opacity: 0}, 0)

@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+._container {
+  z-index: 2;
+  height: 100vh;
+  position: fixed;
+}
+
+._container ._nav-drawer {
+  position: absolute;
+  left: -200px;
+  height: 100vh;
+  width: 200px;
+  background: darkorchid;
+}
+
+._container ._nav-drawer ._nav-container {
+  border: solid white 2px;
+  overflow: hidden;
+  height: 30px;
+  text-align: center;
+}
+
+._container ._nav-drawer ._nav-container a {
+  height: 25px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: solid hotpink 2px;
+}
+
+._hamburger {
+  border: solid white 3px;
+  background: deepskyblue;
+}
+
+._hamburger._play-1 {
+  width: 50px;
+  height: 50px;
+}
+
+._hamburger._play-2 {
+  width: 70px;
+  height: 70px;
+}
+
+nav {
+  height: 100px;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr;
+  background: gray;
+}
+
+nav ._nav__left {
+  height: 100%;
+  border: solid hotpink 2px;
+  grid-area: _navLeft;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ._nav__left ._top {
+  background: green;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+}
+
+nav ._nav__left ._top ._left {
+  flex-grow: 1;
+  background: darkorange;
+  display: grid;
+  place-items: center;
+}
+
+nav ._nav__left ._top ._left h1 {
+  margin: 0;
+}
+
+nav ._nav__left ._top ._right {
+  flex-grow: 1;
+  background: darkorchid;
+  display: grid;
+  place-items: center;
+}
+
+nav ._nav__left ._bottom {
+  flex-grow: 1;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-evenly;
+  background: red;
+  width: 100%;
+}
+
+nav ._nav__left ._bottom a {
+  background: green;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  width: 60px;
+}
+
+nav ._nav__right {
+  height: 100%;
+  border: solid darkorange 2px;
+  grid-area: _navRight;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2%;
+}
+
+@media screen and (max-width: 775px) {
+  nav {
+    grid-template-columns: 1fr;
+    grid-template-areas: "_navLeft";
+  }
+  nav ._nav__right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 776px) {
+  nav {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "_navLeft _navRight";
+  }
+  nav ._nav__left ._top ._right ._hamburger {
+    visibility: hidden;
+  }
+}
+
+body {
+  background: deepskyblue;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "nav" "main" "footer";
+}
+
+nav {
+  grid-area: nav;
+}
+
+footer {
+  grid-area: footer;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  gap: 1px;
+  padding: 5px 200px;
+}
+
+@media screen and (max-width: 766px) {
+  main {
+    border: dashed green 5px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-areas: "A" "B" "C" "D" "E" "F" "G" "H" "I" "J";
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  main {
+    border: dashed red 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: "A A" "A A" "B B" "B B" "C D" "E F" "G H" "I J";
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    border: dashed blue 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "A A B B" "A A B B" "C D E F" "G H I J";
+  }
+}
+
+main .hero-img {
+  grid-area: A;
+}
+
+main .hero-text {
+  grid-area: B;
+}
+
+main .C {
+  grid-area: C;
+}
+
+main .D {
+  grid-area: D;
+}
+
+main .E {
+  grid-area: E;
+}
+
+main .F {
+  grid-area: F;
+}
+
+main .G {
+  grid-area: G;
+}
+
+main .H {
+  grid-area: H;
+}
+
+main .I {
+  grid-area: I;
+}
+
+main .J {
+  grid-area: J;
+}
+
+.hero-img {
+  background: darkorange;
+}
+
+.hero-text {
+  background: darkorchid;
+  padding: 0 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-text .container {
+  border: dashed white 5px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hero-text .container > div {
+  border: solid hotpink 2px;
+}
+
+.hero-text .container > div > button {
+  width: 30%;
+}
+
+footer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer h5 {
+  font-size: 2rem;
+}

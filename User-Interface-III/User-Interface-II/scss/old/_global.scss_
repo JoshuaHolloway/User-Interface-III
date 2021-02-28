@@ -1,0 +1,24 @@
+@import 'colors';
+@import 'breakpoints';
+
+* {
+  margin: 0; 
+  box-sizing: border-box;
+}
+html { 
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%; // =10px
+}
+body { font-size: 1.4rem; } // =14px
+h1 { font-size: 3.4rem; } // =34px
+h2 { font-size: 3.0rem; } // =30px
+h3 { font-size: 2.6rem; } // =26px
+h4 { font-size: 2.4rem; } // =24px
+h5 { font-size: 2.2rem; } // =22px;
+
+a { text-decoration: none; }
+
+button {
+  height: 35px;
+  border-radius: 4px;
+}

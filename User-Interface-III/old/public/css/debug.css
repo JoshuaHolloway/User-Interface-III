@@ -1,0 +1,14 @@
+/* debug */
+/* :root {
+    --debug-border-0: solid black 5px;
+    --debug-border-1: solid blue 5px;
+    --debug-border-2: solid red 5px;
+    --debug-border-3: solid green 5px;
+} */
+/* non-debug */
+:root {
+    --debug-border-0: none;
+    --debug-border-1: none;
+    --debug-border-2: none;
+    --debug-border-3: none;
+}

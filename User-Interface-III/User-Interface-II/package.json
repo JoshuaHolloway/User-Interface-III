@@ -1,0 +1,22 @@
+{
+  "name": "user-interface-ii",
+  "version": "1.0.0",
+  "description": "The module challenge is the afternoon project or assignment that students work through independently. This expands on the guided project completed earlier with the instructor.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/User-Interface-II.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/User-Interface-II/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/User-Interface-II#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.3.0"
+  }
+}

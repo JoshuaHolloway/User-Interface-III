@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: deepskyblue;
+  height: 100vh;
+}
+
+nav {
+  background: lightgreen;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1%;
+}
+
+.hamburger {
+  border: solid black 5px;
+  width: 75px;
+  height: 75px;
+}
+
+.nav-drawer {
+  transform: translateX(-100px);
+  height: calc(100vh - 100px);
+  width: 100px;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.nav-drawer .box-container {
+  position: relative;
+  height: 50px;
+  width: 100px;
+  overflow: hidden;
+}
+
+.nav-drawer .box-container .box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.nav-drawer .box-container .box a {
+  text-decoration: none;
+  color: white;
+}

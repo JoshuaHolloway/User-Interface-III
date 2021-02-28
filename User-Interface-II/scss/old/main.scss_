@@ -9,26 +9,18 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 150px 1fr 150px;
-
-  grid-template-areas: 
-    "nav"
-    "main"
-    "footer";
 }
 
 nav {
-  grid-area: nav;
   background: $nav-background;
   color: $nav-color;
 }
 
 footer {
-  grid-area: footer;
   background: gray;
 }
 
 main {
-  grid-area: main;
   display: grid;
   gap: 1px;
   padding: 5px 200px;
@@ -95,17 +87,6 @@ main {
       "G H I J";
   }
 }
-
-.hero-img { grid-area: A; }
-.hero-text { grid-area: B; }
-.C { grid-area: C }
-.D { grid-area: D }
-.E { grid-area: E }
-.F { grid-area: F }
-.G { grid-area: G }
-.H { grid-area: H }
-.I { grid-area: I }
-.J { grid-area: J }
 
 
 // @import 'nav';

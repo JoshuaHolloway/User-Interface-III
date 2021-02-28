@@ -1,4 +1,4 @@
-// const tl = gsap.timeline();
+const tl = gsap.timeline();
 const tl_side_drawer = gsap.timeline();
 // const tween = gsap.to('.nav-drawer', {
 //     duration: 0.5,
@@ -46,7 +46,7 @@ hamburgers.forEach((hamburger, hamburger_idx) => {
  
   const animate_hamburger_lines = () => {
 
-    console.log(`hamburger ${hamburger_idx}`);
+    console.log(`JOSH hamburger ${hamburger_idx}`);
 
     tl.restart();
 
@@ -117,5 +117,6 @@ hamburgers.forEach((hamburger, hamburger_idx) => {
 
 
   hamburger.addEventListener('click', animate_nav_drawer);
-  // hamburger.addEventListener('click', animate_hamburger_lines);
+  hamburger.addEventListener('click', animate_hamburger_lines);
 });
+

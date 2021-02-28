@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import 'global';
+
+body {
+  background: deepskyblue;
+  margin: 0;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 1fr 150px;
+
+  grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+}
+
+nav {
+  grid-area: nav;
+  background: $nav-background;
+  color: $nav-color;
+}
+
+footer {
+  grid-area: footer;
+  background: gray;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  gap: 1px;
+  padding: 5px 200px;
+
+  // https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  // Breakpoint         Class infix     Dimensions    Range
+  // ----------         -----------     ----------    -----
+  // X-Small 	          None 	          <576px        [         w  <= 576-1 ]
+  // Small 	            sm 	            ≥576px        [576  <=  w  <= 767-1 ]
+  // Medium 	          md 	            ≥768px        [767  <=  w  <= 992-1 ]
+  // Large 	            lg 	            ≥992px        [992  <=  w  <= 1200-1]
+  // Extra large 	      xl 	            ≥1200px       [1200 <=  w  <= 1400-1]
+  // Extra extra large 	xxl 	          ≥1400px       [1400 <=  w           ]
+
+  // sm
+  @media screen and 
+    (max-width: 766px)
+  {
+    border: dashed green 5px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-areas: 
+      "A"
+      "B"
+      "C"
+      "D"
+      "E"
+      "F"
+      "G"
+      "H"
+      "I"
+      "J";
+  }
+
+  // md
+  @media screen and 
+    (min-width: 767px) and (max-width: 991px)
+  {
+    border: dashed red 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+      "A A"
+      "A A"
+      "B B"
+      "B B"
+      "C D"
+      "E F"
+      "G H"
+      "I J";
+  }
+
+  // lg
+  @media screen and 
+    (min-width: 992px)
+  {
+    border: dashed blue 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "A A B B"
+      "A A B B"
+      "C D E F"
+      "G H I J";
+  }
+}
+
+.hero-img { grid-area: A; }
+.hero-text { grid-area: B; }
+.C { grid-area: C }
+.D { grid-area: D }
+.E { grid-area: E }
+.F { grid-area: F }
+.G { grid-area: G }
+.H { grid-area: H }
+.I { grid-area: I }
+.J { grid-area: J }
+
+
+// @import 'nav';
+@import 'main';
+// @import 'footer';

@@ -1,0 +1,75 @@
+@import url('./debug.css');
+@import url('./background-colors.css');
+/* ----------------- */
+/* ------ 3D ------- */
+/* ------ 3D ------- */
+/* ------ 3D ------- */
+/* ------ 3D ------- */
+/* ----------------- */
+/* Adapted from: https://3dtransforms.desandro.com/perspective */
+.ThreeD-Container {
+    perspective: 600px;
+}
+
+.Card {
+    border: var(--debug-border-3);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+
+    /* Have subsequent children inherit parent’s (this element's) perspective */
+    transform-style: preserve-3d;
+}
+.Card {
+    position: relative;
+    transition: 0.5s transform ease;
+}
+/* Stop Glitchy'ness: https://youtu.be/FeJEEE3zc4U */
+/* On .ThreeD-Container:hover, flip the .Card */
+.ThreeD-Container:hover .Card{
+    transform: rotateY(180deg);
+}
+
+.Card-Face {
+    height: 100%;
+    width: 100%;
+
+    /* To position the faces in 3D space, we need to reset their positions in 2D with position: absolute */
+    position: absolute;
+
+    /* Hide the back-side of the faces when they are faced away from the viewer */
+    backface-visibility: hidden;
+}
+.Image-Container {
+    height: 100%;
+    width: 100%;
+    /* Background Image: https://youtu.be/33IinMVJf-M */
+    background-image: url('../img/test-image_512x512_MozJPEG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.Color-Overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+.Image-Container > h4 {
+    z-index: 1;
+}
+
+.Card-Face-Front {
+    background: var(--background-6);
+}
+
+/* Add 3D-transform rotateY(180deg) to flip .Card-Face-Back */
+.Card-Face-Back {
+    background: var(--background-7);
+    transform: rotateY(180deg);
+}
+
+.Center {
+    display: grid;
+    place-items: center;
+}

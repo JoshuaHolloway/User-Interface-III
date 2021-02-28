@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Holloway | Portfolio</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <nav>
+      <div class="left">
+        <div class="nav__row top">
+          <h1>Josh Holloway</h1>
+          <div class="hamburger-container">
+            <div class="hamburger-debug"></div>
+          </div>
+        </div>
+
+        <div class="nav__row bottom">
+          <a class="active" href="#">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/projects">Projects</a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="hamburger">
+          <svg height="210" width="100">
+            <line class="line-1" 
+                  x1="10%" y1="20" x2="60%" y2="20"
+                  style="stroke:rgb(255,255,255); stroke-width:5" />
+            <line class="line-2"
+                  x1="10%" y1="35" x2="60%" y2="35"
+                  style="stroke:rgb(255,255,255); stroke-width:5" />
+            <line class="line-3"
+                  x1="10%" y1="50" x2="60%" y2="50"
+                  style="stroke:rgb(255,255,255); stroke-width:5" />
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="hero-img"></div>
+      <div class="hero-text">
+        <div class="container">
+          <h2>Josh Holloway</h2>
+          <div>
+            <button>My Projects</button>
+          </div>
+          <p>
+            Here are some words about me and my journey in coding so far. Thesee words are authentic and inspiring. These words tell my story.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="card C"><user-card></user-card></div>
+      <div class="card D"><user-card></user-card></div>
+      <div class="card E"><user-card></user-card></div>
+      <div class="card F"><user-card></user-card></div>
+      <div class="card G"><user-card></user-card></div>
+      <div class="card H"><user-card></user-card></div>
+      <div class="card I"><user-card></user-card></div>
+      <div class="card J"><user-card></user-card></div>
+    </main>
+
+    <footer>
+      <h5>Like what you see?</h5>
+      <div>
+        <button>Contact Me</button>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="module" src="./web-comps/card/userCard.js"></script>
+
+</body>
+</html>
