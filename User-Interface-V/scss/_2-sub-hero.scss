@@ -1,0 +1,16 @@
+section#sub-hero {
+  color: black;
+  height: 500px;
+  // border: dashed deeppink 10px;
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > .container {
+    border: dashed black 2px;
+    width: 500px;
+    height: 200px;
+  }
+}

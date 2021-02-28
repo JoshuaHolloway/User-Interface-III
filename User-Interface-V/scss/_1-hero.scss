@@ -1,0 +1,34 @@
+section#sub-hero {
+  height: 100vh;
+  width: 100vw;
+}
+
+section#hero { // relative 
+  // border: dashed darkorange 10px;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  video.hero-video { // absolute
+    // object-fit: fill;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  > .container {
+    // border: dashed white 5px;
+    height: fit-content;
+
+    position: absolute;
+    top: 35%;
+    left: 15%;
+  }
+}

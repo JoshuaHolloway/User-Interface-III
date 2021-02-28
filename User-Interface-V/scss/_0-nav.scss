@@ -1,0 +1,41 @@
+nav {
+  height: 100vh;
+  width: 100px;
+  background: black;
+  position: fixed;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 0;
+
+  .logo {
+    width: 35px;
+    // height: 50px;
+    // border: dashed white 2px;
+  }
+
+  .hamburger {
+    // border: solid white 2px;
+    width: 50px;
+    height: 35px;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    // border: dashed white 2px;
+    height: 150px;
+    width: 35px;
+
+    .bi-twitter {
+      // font-size: 2em;
+    } 
+  }
+}
