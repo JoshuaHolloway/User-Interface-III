@@ -1,6 +1,0 @@
-$nav-background: #212121;
-$nav-color: white;
-
-:root {
-  --nav-background: $nav-background;
-}
